@@ -25,9 +25,6 @@ export const RootLayout: React.FC<RootLayoutProps> = ({
         <Navigation />
       </header>
 
-      {/* Breadcrumbs - At top of content */}
-      <Breadcrumbs />
-
       {/* Main Content */}
       <main className="flex-1">
         {children}

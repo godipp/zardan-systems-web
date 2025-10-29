@@ -1,4 +1,5 @@
 import SEOHead from "@/components/SEOHead";
+import { Container } from "@/components/ui/Container";
 
 const Privacy = () => {
   return (
@@ -8,18 +9,18 @@ const Privacy = () => {
                 description="Privacy policy for Zardan Systems. Learn how we collect, use, and protect your data."
             />
 
-            <div className="bg-[#F9FAFB] text-slate-800 min-h-screen py-20">
-                {/* ===== HEADER ===== */}
-                <section className="container mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+            <div className="py-20">
+                <Container padding="lg">
+                    {/* ===== HEADER ===== */}
+                    <section className="text-center mb-16">
                     <h1 className="text-4xl font-bold text-[#0F172A] mb-3 tracking-tight">
                         Privacy Policy
                     </h1>
                     <div className="w-20 h-px bg-slate-300 mx-auto mb-4"></div>
                     <p className="text-sm text-slate-500">Last updated: 2025</p>
-                </section>
+                    </section>
 
-                {/* ===== MAIN CONTENT CONTAINER ===== */}
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    {/* ===== MAIN CONTENT CONTAINER ===== */}
                     <div className="bg-white rounded-3xl shadow-lg border border-slate-200 p-10 md:p-16 relative overflow-hidden">
                         {/* Vertical Accent Bar */}
                         <div className="absolute top-0 left-0 h-full w-[6px] bg-[#1E40AF] rounded-l-3xl"></div>
@@ -112,7 +113,7 @@ const Privacy = () => {
                             </section>
                         </div>
                     </div>
-                </div>
+                </Container>
             </div>
         </>
     );

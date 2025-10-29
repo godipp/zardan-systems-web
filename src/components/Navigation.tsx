@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Container } from '@/components/ui/Container';
 import { NAVIGATION_ITEMS } from '@/constants';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { useScrollToTop } from '@/hooks/useScrollToTop';
-import logo from '/assets/logo.svg';
 
 const Navigation: React.FC = () => {
   const location = useLocation();
@@ -72,7 +72,7 @@ const Navigation: React.FC = () => {
   return (
     <>
       <nav className="border-b border-border bg-card sticky top-0 z-50 relative">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <Container padding="lg">
           <div className="flex justify-between items-center h-16">
             {/* Logo + Company Name */}
             <Link
@@ -81,9 +81,12 @@ const Navigation: React.FC = () => {
               onClick={closeMobileMenu}
             >
               <img
-                src={logo}
+                src="/assets/logo.svg"
                 alt="Zardan Systems Logo"
                 className="h-10 w-auto object-contain"
+                loading="eager"
+                width="40"
+                height="40"
               />
               <span className="text-[#0D1E40]">Zardan Systems</span>
             </Link>
@@ -136,7 +139,7 @@ const Navigation: React.FC = () => {
             )}
 
           </div>
-        </div>
+        </Container>
       </nav>
 
       {/* Mobile Navigation Overlay - Only render on mobile */}

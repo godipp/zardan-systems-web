@@ -1,4 +1,5 @@
 import SEOHead from "@/components/SEOHead";
+import { Container } from "@/components/ui/Container";
 
 const About = () => {
     return (
@@ -8,9 +9,10 @@ const About = () => {
                 description="Founded in 2018, Zardan Systems provides enterprise integration and automation solutions trusted by European finance, logistics, and manufacturing clients."
             />
 
-            <div className="bg-[#F9FAFB] text-slate-800 min-h-screen py-12 sm:py-16 md:py-20">
-                {/* ===== HEADER ===== */}
-                <section className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 text-center mb-6 sm:mb-10 md:mb-16">
+            <div className="py-12 sm:py-16 md:py-20">
+                <Container padding="lg">
+                    {/* ===== HEADER ===== */}
+                    <section className="text-center mb-6 sm:mb-10 md:mb-16">
                     <h1 className="text-xl sm:text-2xl md:text-4xl font-bold text-[#0F172A] mb-2 sm:mb-2 md:mb-3 tracking-tight">
                         About Zardan Systems
                     </h1>
@@ -20,10 +22,9 @@ const About = () => {
                         Europe. Our expertise lies in connecting complex systems and transforming fragmented processes into
                         unified, measurable, and controllable environments.
                     </p>
-                </section>
+                    </section>
 
-                {/* ===== MAIN CONTAINER ===== */}
-                <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+                    {/* ===== MAIN CONTAINER ===== */}
                     <div className="bg-white rounded-2xl sm:rounded-3xl shadow-lg border border-slate-200 p-4 sm:p-6 md:p-10 lg:p-16 relative overflow-hidden">
                         {/* Vertical Accent Bar */}
                         <div className="absolute top-0 left-0 h-full w-[6px] bg-[#1E40AF] rounded-l-3xl"></div>
@@ -140,7 +141,7 @@ const About = () => {
                             </section>
                         </div>
                     </div>
-                </div>
+                </Container>
             </div>
         </>
     );

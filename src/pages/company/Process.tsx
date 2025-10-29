@@ -1,5 +1,6 @@
 import SEOHead from "@/components/SEOHead";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { Container } from "@/components/ui/Container";
 import { Search, GitBranch, Activity } from "lucide-react";
 
 const Process = () => {
@@ -43,7 +44,7 @@ const Process = () => {
         description="Structured approach to enterprise integration: Discovery, Integration, and Monitoring for reliable system automation."
       />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <Container className="py-12 md:py-16" padding="lg">
         <div className="max-w-3xl mb-8 md:mb-12">
           <h1 className="text-3xl md:text-4xl font-bold mb-3 md:mb-4">Our Process</h1>
           <p className="text-lg md:text-xl text-muted-foreground">
@@ -93,7 +94,7 @@ const Process = () => {
             </p>
           </div>
         </div>
-      </div>
+      </Container>
     </>
   );
 };

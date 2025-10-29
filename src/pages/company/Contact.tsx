@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
         schema={schema}
       />
 
-      <div className="bg-[#F9FAFB] min-h-screen text-slate-800 py-20">
+      <div className="py-20">
         <PageHeader
           title="Contact"
           description="Schedule a consultation to discuss integration and automation requirements."

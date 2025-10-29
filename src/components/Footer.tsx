@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import { Container } from "@/components/ui/Container";
 
 const Footer = () => {
   return (
     <footer className="bg-[#0D1E40] text-white mt-16 sm:mt-20 md:mt-24 border-t border-[#1E3A8A]/20">
-      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-8 sm:py-10 md:py-12">
+      <Container className="py-8 sm:py-10 md:py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 sm:gap-8">
           {/* Company Info */}
           <div className="md:col-span-2">
@@ -108,7 +109,7 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 };

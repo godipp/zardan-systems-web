@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from '@/components/SEOHead';
-import { PageHeader } from '@/components/ui/PageHeader';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Container } from '@/components/ui/Container';
 import { ArrowRight } from 'lucide-react';
 import { SERVICES } from '@/constants';
 
@@ -36,12 +36,13 @@ const Services: React.FC = () => {
         schema={schema}
       />
 
-      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-12 sm:py-16">
-        <PageHeader
-          title="Services"
-          description="Enterprise integration and automation solutions designed for operational efficiency."
-          className="max-w-3xl mb-8 sm:mb-10 md:mb-12"
-        />
+      <Container className="py-12 sm:py-16" padding="lg">
+        <div className="max-w-3xl mb-8 sm:mb-10 md:mb-12">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-[#0D1E40]">Services</h1>
+            <p className="text-sm sm:text-base md:text-xl text-[#475569] mb-4 sm:mb-6">
+            Enterprise integration and automation solutions designed for operational efficiency.
+            </p>
+        </div>
         <p className="text-sm sm:text-sm md:text-base text-[#4B5563] mb-6 sm:mb-8 md:mb-12">
           We deliver integration and automation systems trusted by organizations across the EU and UK.
         </p>
@@ -95,7 +96,7 @@ const Services: React.FC = () => {
             </AnimatedSection>
           ))}
         </div>
-      </div>
+      </Container>
     </>
   );
 };

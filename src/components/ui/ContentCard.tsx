@@ -1,5 +1,6 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
+import { Container } from '@/components/ui/Container';
 
 interface ContentCardProps {
   children: React.ReactNode;
@@ -21,7 +22,7 @@ export const ContentCard: React.FC<ContentCardProps> = ({
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-6">
+    <Container padding="lg">
       <div
         className={cn(
           'bg-white rounded-3xl shadow-lg border border-slate-200 relative overflow-hidden',
@@ -34,6 +35,6 @@ export const ContentCard: React.FC<ContentCardProps> = ({
         )}
         <div className="relative z-10">{children}</div>
       </div>
-    </div>
+    </Container>
   );
 };

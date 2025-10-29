@@ -2,7 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!-- ===== SECURITY HEADERS ===== -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:;" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
 
     <!-- ===== TITLE & DESCRIPTION ===== -->
     <title>Zardan Systems | Enterprise Integration & Automation</title>
@@ -12,16 +19,65 @@
     />
     <meta name="author" content="Zardan Systems" />
 
-    <!-- ===== FAVICON ===== -->
-    <link rel="icon" type="image/png" href="/assets/logo.png" />
-    <link rel="apple-touch-icon" href="/assets/logo.png" />
+    <!-- ===== FAVICON & PWA ===== -->
+    <!-- Default favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    
+    <!-- Theme-aware favicon script -->
+    <script>
+      (function() {
+        function updateFavicon() {
+          const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const favicon = document.querySelector('link[rel="icon"]');
+          const shortcutIcon = document.querySelector('link[rel="shortcut icon"]');
+          
+          if (isDark) {
+            favicon.href = '/assets/logo_dark.svg?v=2';
+            shortcutIcon.href = '/assets/logo_dark.svg?v=2';
+          } else {
+            favicon.href = '/assets/logo_light.svg?v=2';
+            shortcutIcon.href = '/assets/logo_light.svg?v=2';
+          }
+        }
+        
+        // Update on load
+        updateFavicon();
+        
+        // Update on theme change
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
+      })();
+    </script>
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/assets/logo.webp" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- iOS Safari specific -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Zardan Systems" />
 
-    <!-- ===== FONTS ===== -->
+    <!-- ===== PERFORMANCE & OPTIMIZATION ===== -->
+    <meta name="theme-color" content="#0D1E40" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1E3A8A" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Zardan Systems" />
+    
+    <!-- ===== PRECONNECTIONS FOR PERFORMANCE ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="/assets/logo_light.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="/assets/logo_dark.svg" as="image" type="image/svg+xml" />
+    
+    <!-- ===== FONTS ===== -->
     <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-            rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
     />
 
     <!-- ===== OPEN GRAPH ===== -->
@@ -33,7 +89,7 @@
             content="Enterprise integration and automation solutions trusted by European finance, logistics, and manufacturing clients."
     />
     <meta property="og:url" content="https://www.zardansystems.com/" />
-    <meta property="og:image" content="https://www.zardansystems.com/assets/og-banner.png" />
+    <meta property="og:image" content="https://www.zardansystems.com/assets/og-banner.webp" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
@@ -44,10 +100,17 @@
             name="twitter:description"
             content="Enterprise integration and automation solutions trusted by European finance, logistics, and manufacturing clients."
     />
-    <meta name="twitter:image" content="https://www.zardansystems.com/assets/og-banner.png" />
+    <meta name="twitter:image" content="https://www.zardansystems.com/assets/og-banner.webp" />
 
     <!-- ===== CANONICAL ===== -->
     <link rel="canonical" href="https://www.zardansystems.com/" />
+    
+    <!-- ===== ADDITIONAL SEO META TAGS ===== -->
+    <meta name="keywords" content="enterprise integration, process automation, AI integration, system integration, ERP, CRM, business automation, data analytics, UK, EU, enterprise solutions" />
+    <meta name="geo.region" content="GB" />
+    <meta name="geo.placename" content="United Kingdom" />
+    <meta name="geo.position" content="52.2053;-3.1218" />
+    <meta name="ICBM" content="52.2053, -3.1218" />
 
     <!-- ===== STRUCTURED DATA (JSON-LD) ===== -->
     <script type="application/ld+json">
@@ -59,11 +122,11 @@
             "url": "https://www.zardansystems.com/",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.zardansystems.com/assets/logo.png",
+                "url": "https://www.zardansystems.com/assets/logo.webp",
                 "width": 200,
                 "height": 200
             },
-            "image": "https://www.zardansystems.com/assets/og-banner.png",
+            "image": "https://www.zardansystems.com/assets/og-banner.webp",
             "description": "Enterprise integration and automation company based in the United Kingdom, serving clients across the EU and UK.",
             "foundingDate": "2018",
             "address": {
@@ -147,7 +210,7 @@
 </head>
 
 <body>
-<div id="root"></div>
-<script type="module" src="/src/main.tsx"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>

@@ -1,17 +1,20 @@
 import SEOHead from "@/components/SEOHead";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
+import { Container } from "@/components/ui/Container";
+import { ServiceLayout } from "@/layouts/ServiceLayout";
 
 const ProcessAutomation = () => {
   return (
-    <>
-            <SEOHead
-                title="Process Automation | Zardan Systems"
-                description="Automate repetitive workflows across departments to reduce manual work, eliminate errors, and accelerate processing time."
-            />
+    <ServiceLayout>
+      <SEOHead
+        title="Process Automation | Zardan Systems"
+        description="Automate repetitive workflows across departments to reduce manual work, eliminate errors, and accelerate processing time."
+      />
 
-            <div className="bg-[#F9FAFB] text-slate-800 min-h-screen py-20 relative overflow-hidden">
-                {/* ===== HEADER ===== */}
-                <section className="container mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+      <div className="py-20 relative overflow-hidden">
+                <Container padding="lg">
+                    {/* ===== HEADER ===== */}
+                    <section className="text-center mb-16">
                     <h1 className="text-4xl font-bold text-[#0F172A] mb-3 tracking-tight">
                         Process Automation
                     </h1>
@@ -20,10 +23,9 @@ const ProcessAutomation = () => {
                         Automate repetitive workflows to eliminate errors and accelerate
                         operations across departments.
                     </p>
-                </section>
+                    </section>
 
-                {/* ===== MAIN CONTENT ===== */}
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    {/* ===== MAIN CONTENT ===== */}
                     <div className="bg-white rounded-3xl shadow-lg border border-slate-200 p-10 md:p-16">
                         <div className="space-y-8 sm:space-y-12 md:space-y-16">
                             {/* Problem Block - Left */}
@@ -117,7 +119,7 @@ const ProcessAutomation = () => {
                             </AnimatedSection>
                         </div>
                     </div>
-                </div>
+                </Container>
 
                 {/* === Animations === */}
                 <style>{`
@@ -169,9 +171,9 @@ const ProcessAutomation = () => {
             }
           }
         `}</style>
-            </div>
-        </>
-    );
+      </div>
+    </ServiceLayout>
+  );
 };
 
 export default ProcessAutomation;

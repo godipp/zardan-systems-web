@@ -2,6 +2,7 @@ import SEOHead from "@/components/SEOHead";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
+import { Container } from "@/components/ui/Container";
 import { Truck, Factory, TrendingUp } from "lucide-react";
 
 const CaseStudies = () => {
@@ -19,9 +20,9 @@ const CaseStudies = () => {
                 "99.7% accuracy in transaction matching",
                 "Processing time reduced from 5 days to 4 hours",
             ],
-            diagram: "/assets/api-gateway-diagram.png",
+            diagram: "/assets/api-gateway-diagram.webp",
             trustText: "Clients from Germany trust us",
-            flag: "/assets/Flag_of_Germany.png",
+            flag: "/assets/Flag_of_Germany.webp",
         },
         {
             industry: "Logistics",
@@ -37,9 +38,9 @@ const CaseStudies = () => {
                 "92% reduction in data entry errors",
                 "Real-time inventory accuracy across all channels",
             ],
-            diagram: "/assets/logistics-diagram.png",
+            diagram: "/assets/logistics-diagram.webp",
             trustText: "Clients from Austria trust us",
-            flag: "/assets/Flag_of_Austria.png",
+            flag: "/assets/Flag_of_Austria.webp",
         },
         {
             industry: "Manufacturing",
@@ -55,9 +56,9 @@ const CaseStudies = () => {
                 "40% improvement in production efficiency",
                 "15% decrease in inventory carrying costs",
             ],
-            diagram: "/assets/manufacturing-diagram.png",
+            diagram: "/assets/manufacturing-diagram.webp",
             trustText: "Clients from Germany trust us",
-            flag: "/assets/Flag_of_Germany.png",
+            flag: "/assets/Flag_of_Germany.webp",
         },
     ];
 
@@ -94,7 +95,7 @@ const CaseStudies = () => {
                 schema={schema}
             />
 
-            <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-12 sm:py-16">
+            <Container className="py-12 sm:py-16" padding="lg">
                 <div className="max-w-3xl mb-8 sm:mb-10 md:mb-12">
                     <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-[#0D1E40]">Case Studies</h1>
                     <p className="text-sm sm:text-base md:text-xl text-[#475569] mb-4 sm:mb-6">
@@ -220,7 +221,7 @@ const CaseStudies = () => {
                         </AnimatedSection>
                     ))}
                 </div>
-            </div>
+            </Container>
         </>
     );
 };

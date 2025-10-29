@@ -40,7 +40,7 @@ export const useSEO = ({ title, description, schema }: SEOProps) => {
     setMeta('meta[property="og:title"]', 'property', title);
     setMeta('meta[property="og:description"]', 'property', description);
     setMeta('meta[property="og:url"]', 'property', window.location.href);
-    setMeta('meta[property="og:image"]', 'property', 'https://www.zardansystems.com/assets/og-banner.png');
+    setMeta('meta[property="og:image"]', 'property', 'https://www.zardansystems.com/assets/og-banner.webp');
     setMeta('meta[property="og:image:width"]', 'property', '1200');
     setMeta('meta[property="og:image:height"]', 'property', '630');
     setMeta('meta[property="og:image:alt"]', 'property', 'Zardan Systems - Enterprise Integration & Automation');
@@ -52,7 +52,7 @@ export const useSEO = ({ title, description, schema }: SEOProps) => {
     setMeta('meta[name="twitter:creator"]', 'name', '@ZardanSystems');
     setMeta('meta[name="twitter:title"]', 'name', title);
     setMeta('meta[name="twitter:description"]', 'name', description);
-    setMeta('meta[name="twitter:image"]', 'name', 'https://www.zardansystems.com/assets/og-banner.png');
+    setMeta('meta[name="twitter:image"]', 'name', 'https://www.zardansystems.com/assets/og-banner.webp');
     setMeta('meta[name="twitter:image:alt"]', 'name', 'Zardan Systems - Enterprise Integration & Automation');
 
     // Additional SEO meta tags

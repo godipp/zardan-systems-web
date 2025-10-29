@@ -1,29 +1,31 @@
 import SEOHead from "@/components/SEOHead";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
+import { Container } from "@/components/ui/Container";
+import { ServiceLayout } from "@/layouts/ServiceLayout";
 
 const AIIntegration = () => {
-  return (
-    <>
+    return (
+        <ServiceLayout>
             <SEOHead
                 title="AI Integration | Zardan Systems"
                 description="Enhance decision-making with integrated AI modules that provide intelligent automation and predictive analytics."
             />
 
-            <div className="bg-[#F9FAFB] text-slate-800 min-h-screen py-20 relative overflow-hidden">
-                {/* ===== HEADER ===== */}
-                <section className="container mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
-                    <h1 className="text-4xl font-bold text-[#0F172A] mb-3 tracking-tight">
-                        AI Integration
-                    </h1>
-                    <div className="w-20 h-px bg-slate-300 mx-auto mb-4"></div>
-                    <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
-                        Integrated AI modules that enhance decision-making and automate
-                        complex processes.
-                    </p>
-                </section>
+            <div className="py-20 relative overflow-hidden">
+                <Container padding="lg">
+                    {/* ===== HEADER ===== */}
+                    <section className="text-center mb-16">
+                        <h1 className="text-4xl font-bold text-[#0F172A] mb-3 tracking-tight">
+                            AI Integration
+                        </h1>
+                        <div className="w-20 h-px bg-slate-300 mx-auto mb-4"></div>
+                        <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+                            Integrated AI modules that enhance decision-making and automate
+                            complex processes.
+                        </p>
+                    </section>
 
-                {/* ===== MAIN CONTENT ===== */}
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    {/* ===== MAIN CONTENT ===== */}
                     <div className="bg-white rounded-3xl shadow-lg border border-slate-200 p-10 md:p-16">
                         <div className="space-y-8 sm:space-y-12 md:space-y-16">
                             {/* Problem Block - Left */}
@@ -113,10 +115,11 @@ const AIIntegration = () => {
                             </AnimatedSection>
                         </div>
                     </div>
-                </div>
+                </Container>
+            </div>
 
-                {/* ===== Animations ===== */}
-                <style>{`
+            {/* ===== Animations ===== */}
+            <style>{`
                     @keyframes pulseGlow {
                         0%, 100% {
                             box-shadow: 0 0 10px rgba(30, 64, 175, 0.15), 0 0 25px rgba(30, 64, 175, 0.1);
@@ -150,9 +153,8 @@ const AIIntegration = () => {
                     .animate-neuronDown { animation: neuronDown 3s ease-in-out infinite; }
                     .animate-neuronUp { animation: neuronUp 3s ease-in-out infinite; animation-delay: 1.5s; }
                 `}</style>
-            </div>
-        </>
-    );
+    </ServiceLayout >
+  );
 };
 
 export default AIIntegration;

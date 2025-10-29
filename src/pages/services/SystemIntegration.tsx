@@ -1,18 +1,20 @@
 import SEOHead from "@/components/SEOHead";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
+import { Container } from "@/components/ui/Container";
+import { ServiceLayout } from "@/layouts/ServiceLayout";
 
 const SystemIntegration = () => {
   return (
-    <>
-            <SEOHead
-                title="System Integration | Zardan Systems"
-                description="We take ownership of data consistency across systems — full visibility, predictable integrations, and no blind spots."
-            />
+    <ServiceLayout>
+      <SEOHead
+        title="System Integration | Zardan Systems"
+        description="We take ownership of data consistency across systems — full visibility, predictable integrations, and no blind spots."
+      />
 
-            <div className="bg-[#F9FAFB] text-slate-800 min-h-screen py-12 sm:py-16 md:py-20 relative overflow-hidden">
-
-                {/* ===== PAGE HEADER ===== */}
-                <section className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 text-center mb-8 sm:mb-12 md:mb-16">
+      <div className="py-12 sm:py-16 md:py-20 relative overflow-hidden">
+                <Container padding="lg">
+                    {/* ===== PAGE HEADER ===== */}
+                    <section className="text-center mb-8 sm:mb-12 md:mb-16">
                     <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#0F172A] mb-2 sm:mb-3 tracking-tight">
                         System Integration
                     </h1>
@@ -20,10 +22,9 @@ const SystemIntegration = () => {
                     <p className="text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
                         Connecting enterprise systems through unified data flows.
                     </p>
-                </section>
+                    </section>
 
-                {/* ===== MAIN CONTENT ===== */}
-                <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+                    {/* ===== MAIN CONTENT ===== */}
                     <div className="bg-white rounded-2xl sm:rounded-3xl shadow-lg border border-slate-200 p-4 sm:p-6 md:p-10 lg:p-16">
                         <div className="space-y-8 sm:space-y-12 md:space-y-16">
                             {/* Problem Block - Left */}
@@ -124,7 +125,7 @@ const SystemIntegration = () => {
                             </AnimatedSection>
                         </div>
                     </div>
-                </div>
+                </Container>
 
                 {/* Animations */}
                 <style>{`
@@ -166,9 +167,9 @@ const SystemIntegration = () => {
                         }
                     }
                 `}</style>
-            </div>
-        </>
-    );
+      </div>
+    </ServiceLayout>
+  );
 };
 
 export default SystemIntegration;

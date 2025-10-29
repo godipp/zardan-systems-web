@@ -96,9 +96,9 @@ export const CASE_STUDIES: CaseStudy[] = [
       '99.7% accuracy in transaction matching',
       'Processing time reduced from 5 days to 4 hours',
     ],
-    diagram: '/assets/api-gateway-diagram.png',
+    diagram: '/assets/api-gateway-diagram.webp',
     trustText: 'Clients from Germany trust us',
-    flag: '/assets/Flag_of_Germany.png',
+    flag: '/assets/Flag_of_Germany.webp',
   },
   {
     id: 'logistics-warehouse-management',
@@ -113,9 +113,9 @@ export const CASE_STUDIES: CaseStudy[] = [
       '92% reduction in data entry errors',
       'Real-time inventory accuracy across all channels',
     ],
-    diagram: '/assets/logistics-diagram.png',
+    diagram: '/assets/logistics-diagram.webp',
     trustText: 'Clients from Austria trust us',
-    flag: '/assets/Flag_of_Austria.png',
+    flag: '/assets/Flag_of_Austria.webp',
   },
   {
     id: 'manufacturing-production-optimization',
@@ -130,9 +130,9 @@ export const CASE_STUDIES: CaseStudy[] = [
       '40% reduction in inventory carrying costs',
       'Zero stockouts in 6 months',
     ],
-    diagram: '/assets/manufacturing-diagram.png',
+    diagram: '/assets/manufacturing-diagram.webp',
     trustText: 'Clients from Baltic region trust us',
-    flag: '/assets/Flag_of_Austria.png', // Placeholder
+    flag: '/assets/Flag_of_Austria.webp', // Placeholder
   },
 ];
 

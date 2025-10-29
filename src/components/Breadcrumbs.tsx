@@ -87,10 +87,10 @@ const Breadcrumbs: React.FC = () => {
 
   return (
     <nav 
-      className="bg-muted/20 border-b border-border/30 py-1.5 sm:py-2 md:py-3"
+      className="bg-muted/20 border-b border-border/30 py-1.5 sm:py-2 md:py-3 px-4 sm:px-6 md:px-8 lg:px-12"
       aria-label="Breadcrumb"
     >
-      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+      <div className="max-w-[1024px] mx-auto">
         <ol className="flex items-center space-x-0.5 sm:space-x-1 md:space-x-2 text-sm sm:text-sm md:text-sm overflow-x-auto breadcrumb-container">
           {breadcrumbs.map((item, index) => (
             <li key={item.path} className="flex items-center flex-shrink-0">

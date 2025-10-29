@@ -1,5 +1,6 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
+import { Container } from '@/components/ui/Container';
 
 interface PageHeaderProps {
   title: string;
@@ -15,7 +16,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
   showDivider = true,
 }) => {
   return (
-    <section className={cn('max-w-6xl mx-auto px-6 text-center mb-16', className)}>
+    <Container padding="lg" className={cn('text-center mb-16', className)}>
       <h1 className="text-4xl font-bold text-[#0F172A] mb-3 tracking-tight">
         {title}
       </h1>
@@ -25,6 +26,6 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
       <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
         {description}
       </p>
-    </section>
+    </Container>
   );
 };
