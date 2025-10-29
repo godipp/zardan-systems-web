@@ -26,8 +26,8 @@ const ProcessAutomation = () => {
                     </section>
 
                     {/* ===== MAIN CONTENT ===== */}
-                    <div className="bg-white rounded-3xl shadow-lg border border-slate-200 p-10 md:p-16">
-                        <div className="space-y-8 sm:space-y-12 md:space-y-16">
+                    <div className="bg-white rounded-3xl shadow-lg border border-slate-200 p-4">
+                        <div className="space-y-4">
                             {/* Problem Block - Left */}
                             <AnimatedSection delay={100} animationType="slide" direction="left">
                                 <div className="bg-slate-50 rounded-xl p-6 sm:p-8 border border-slate-200">
