@@ -69,17 +69,18 @@
     <meta name="application-name" content="Zardan Systems" />
     
     <!-- ===== PRECONNECTIONS FOR PERFORMANCE ===== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" href="/assets/logo.svg" as="image" type="image/svg+xml" />
     <link rel="preload" href="/assets/logo_light.svg" as="image" type="image/svg+xml" />
     <link rel="preload" href="/assets/logo_dark.svg" as="image" type="image/svg+xml" />
     
     <!-- ===== FONTS ===== -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet"
-    />
+    <!-- Preload critical font files -->
+    <link rel="preload" href="/assets/fonts/Inter/static/Inter_18pt-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/assets/fonts/Inter/static/Inter_18pt-Bold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/assets/fonts/Inter/static/Inter_18pt-SemiBold.ttf" as="font" type="font/ttf" crossorigin>
+    
+    <!-- Load font CSS -->
+    <link rel="stylesheet" href="/src/fonts.css">
 
     <!-- ===== OPEN GRAPH ===== -->
     <meta property="og:type" content="website" />

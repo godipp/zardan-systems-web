@@ -9,6 +9,13 @@ const STATIC_CACHE_URLS = [
   '/manifest.json',
   '/src/main.tsx',
   '/src/index.css',
+  '/src/fonts.css',
+  // Font files
+  '/assets/fonts/Inter/static/Inter_18pt-Regular.ttf',
+  '/assets/fonts/Inter/static/Inter_18pt-Bold.ttf',
+  '/assets/fonts/Inter/static/Inter_18pt-SemiBold.ttf',
+  '/assets/fonts/Inter/static/Inter_18pt-Medium.ttf',
+  '/assets/fonts/Inter/static/Inter_18pt-Light.ttf',
   // Add other static assets as needed
 ];
 
@@ -24,6 +31,7 @@ const ROUTE_STRATEGIES = {
   '/': CACHE_STRATEGIES.CACHE_FIRST,
   '/index.html': CACHE_STRATEGIES.CACHE_FIRST,
   '/assets/': CACHE_STRATEGIES.CACHE_FIRST,
+  '/assets/fonts/': CACHE_STRATEGIES.CACHE_FIRST,
   '/src/': CACHE_STRATEGIES.STALE_WHILE_REVALIDATE,
   '/api/': CACHE_STRATEGIES.NETWORK_FIRST
 };
