@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import SEOHead from '@/components/SEOHead';
 import { AnimatedSection } from '@/components/ui/AnimatedSection';
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -7,8 +8,11 @@ import { Button } from '@/components/ui/button';
 import { Container } from '@/components/ui/Container';
 import { ArrowRight } from 'lucide-react';
 import { SERVICES } from '@/constants';
+import { useLocalizedPath } from '@/hooks/useLocalizedPath';
 
 const Services: React.FC = () => {
+  const { t } = useTranslation();
+  const { getLocalizedPath } = useLocalizedPath();
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -38,13 +42,13 @@ const Services: React.FC = () => {
 
       <Container className="py-12 sm:py-16" padding="lg">
         <div className="max-w-3xl mb-8 sm:mb-10 md:mb-12">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-[#0D1E40]">Services</h1>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-[#0D1E40]">{t('services.title')}</h1>
             <p className="text-sm sm:text-base md:text-xl text-[#475569] mb-4 sm:mb-6">
-            Enterprise integration and automation solutions designed for operational efficiency.
+            {t('services.subtitle')}
             </p>
         </div>
         <p className="text-sm sm:text-sm md:text-base text-[#4B5563] mb-6 sm:mb-8 md:mb-12">
-          We deliver integration and automation systems trusted by organizations across the EU and UK.
+          {t('services.description')}
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 items-stretch">
@@ -64,7 +68,7 @@ const Services: React.FC = () => {
                       group-hover:text-[#0D1E40] transition-colors duration-300
                     "
                   >
-                    {service.title}
+                    {t(`services.${service.id}.title`)}
                   </CardTitle>
                   <CardDescription
                     className="
@@ -72,12 +76,12 @@ const Services: React.FC = () => {
                       group-hover:text-[#4B5563] transition-colors duration-300
                     "
                   >
-                    {service.description}
+                    {t(`services.${service.id}.description`)}
                   </CardDescription>
                 </CardHeader>
 
                 <div className="px-2.5 sm:px-3 md:px-6 pb-2.5 sm:pb-3 md:pb-6 mt-auto">
-                  <Link to={service.path}>
+                  <Link to={getLocalizedPath(service.path)}>
                     <Button
                       variant="outline"
                       className="
@@ -87,7 +91,7 @@ const Services: React.FC = () => {
                         text-sm sm:text-sm py-2 sm:py-2.5
                       "
                     >
-                      Learn More
+                      {t('services.learnMore')}
                       <ArrowRight className="ml-1.5 sm:ml-2 h-3 w-3 sm:h-4 sm:w-4 transition-transform group-hover:translate-x-1" />
                     </Button>
                   </Link>

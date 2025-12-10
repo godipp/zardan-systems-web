@@ -1,0 +1,43 @@
+<svg viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg">
+  <!-- ZIC Layer at top -->
+  <rect x="50" y="30" width="400" height="40" rx="6" fill="#1E3A8A" opacity="0.1" stroke="#1E3A8A" stroke-width="2" stroke-dasharray="5,5" />
+  <text x="250" y="55" text-anchor="middle" font-size="14" fill="#1E3A8A" font-weight="600">ZIC Layer</text>
+  
+  <!-- Main flow line -->
+  <line x1="80" y1="200" x2="250" y2="200" stroke="#1E3A8A" stroke-width="4" />
+  <line x1="250" y1="200" x2="420" y2="200" stroke="#1E3A8A" stroke-width="4" />
+  
+  <!-- Application nodes -->
+  <circle cx="80" cy="200" r="20" fill="#1E3A8A" opacity="0.2" />
+  <circle cx="80" cy="200" r="12" fill="#1E3A8A" />
+  <text x="80" y="205" text-anchor="middle" font-size="10" fill="white" font-weight="bold">App</text>
+  
+  <circle cx="420" cy="200" r="20" fill="#1E3A8A" opacity="0.2" />
+  <circle cx="420" cy="200" r="12" fill="#1E3A8A" />
+  <text x="420" y="205" text-anchor="middle" font-size="10" fill="white" font-weight="bold">✓</text>
+  
+  <!-- Adapter A - Isolated -->
+  <rect x="220" y="150" width="60" height="100" rx="6" fill="#10b981" opacity="0.15" stroke="#10b981" stroke-width="3" />
+  <text x="250" y="180" text-anchor="middle" font-size="12" fill="#10b981" font-weight="600">Adapter A</text>
+  
+  <!-- Isolation indicator -->
+  <rect x="215" y="255" width="70" height="25" rx="4" fill="#10b981" opacity="0.3" />
+  <text x="250" y="272" text-anchor="middle" font-size="11" fill="#10b981" font-weight="600">ISOLATED</text>
+  
+  <!-- Connection from flow to adapter -->
+  <line x1="250" y1="200" x2="250" y2="150" stroke="#10b981" stroke-width="2" stroke-dasharray="4,4" />
+  
+  <!-- Flow continues around isolated adapter -->
+  <path d="M 250 200 L 250 240 L 200 240 L 200 280 L 420 280 L 420 200" 
+        fill="none" 
+        stroke="#1E3A8A" 
+        stroke-width="3" 
+        stroke-dasharray="6,4"
+        opacity="0.6" />
+  
+  <!-- Throughput indicator -->
+  <rect x="150" y="290" width="200" height="40" rx="6" fill="#1E3A8A" opacity="0.1" />
+  <text x="250" y="310" text-anchor="middle" font-size="12" fill="#1E3A8A" font-weight="600">Throughput</text>
+  <text x="250" y="325" text-anchor="middle" font-size="14" fill="#1E3A8A" font-weight="bold">+40-60%</text>
+</svg>
+

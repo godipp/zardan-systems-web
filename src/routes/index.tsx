@@ -1,15 +1,20 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
 import { RouteConfig } from '@/types';
 import { ErrorBoundary } from '@/components/ErrorBoundary';
 import AppLayout from '@/components/AppLayout';
 
 // Direct imports for better SEO and faster loading
 import Home from '@/pages/root/Home';
+import Product from '@/pages/product/Product';
 import Services from '@/pages/services/Services';
 import SystemIntegration from '@/pages/services/SystemIntegration';
 import ProcessAutomation from '@/pages/services/ProcessAutomation';
 import AIIntegration from '@/pages/services/AIIntegration';
 import CaseStudies from '@/pages/content/CaseStudies';
+import NovalendCase from '@/pages/content/case-studies/Novalend';
+import NexuCase from '@/pages/content/case-studies/Nexu';
+import UkraineMfiCase from '@/pages/content/case-studies/UkraineMfi';
+import AgrotepCase from '@/pages/content/case-studies/Agrotep';
 import About from '@/pages/company/About';
 import Process from '@/pages/company/Process';
 import Contact from '@/pages/company/Contact';
@@ -23,6 +28,12 @@ export const routeConfig: RouteConfig[] = [
     element: Home,
     title: 'Zardan Systems | Enterprise Integration & Automation',
     description: 'System integration, process automation, and data analytics for finance, logistics, and manufacturing across EU and UK.',
+  },
+  {
+    path: '/product',
+    element: Product,
+    title: 'ZIC Product | Zardan Systems',
+    description: 'ZIC for MFIs. Recovers 20–35% of applications you lose due to timeouts. Reduces BKI timeouts by 30–50%. Eliminates adapter delays during peak hours.',
   },
   {
     path: '/services',
@@ -53,6 +64,30 @@ export const routeConfig: RouteConfig[] = [
     element: CaseStudies,
     title: 'Case Studies | Zardan Systems',
     description: 'Real-world examples of successful system integration and process automation projects across various industries.',
+  },
+  {
+    path: '/case-studies/novalend',
+    element: NovalendCase,
+    title: 'Novalend Case Study | Zardan Systems',
+    description: 'How ZIC stabilized Novalend\'s scoring flow during peak hours, reducing losses from 20-28% to 2-4% and increasing throughput by 45-60%.',
+  },
+  {
+    path: '/case-studies/nexu',
+    element: NexuCase,
+    title: 'Nexu Case Study | Zardan Systems',
+    description: 'How ZIC stabilized Nexu\'s AntiFraud chain and reduced scoring delays, improving conversion by 12-18% during peak hours.',
+  },
+  {
+    path: '/case-studies/ukraine-mfi',
+    element: UkraineMfiCase,
+    title: 'Ukrainian MFI Case Study | Zardan Systems',
+    description: 'How ZIC stabilized UBKI, PVBKI, and AntiFraud for a Ukrainian MFI, reducing application losses from 18-26% to 2-5%.',
+  },
+  {
+    path: '/case-studies/agrotep',
+    element: AgrotepCase,
+    title: 'Agrotep Case Study | Zardan Systems',
+    description: 'How Agrotep transitioned to microservices architecture and stabilized logistics integrations, reducing GPS queues from 18-25k to less than 2k.',
   },
   {
     path: '/about',
@@ -86,19 +121,49 @@ export const routeConfig: RouteConfig[] = [
   },
 ];
 
-export const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <AppLayout />,
-    children: [
-      ...routeConfig.map((route) => ({
-        path: route.path,
+// Helper function to create localized routes
+const createLocalizedRoutes = () => {
+  const languages = ['en', 'ua'];
+  const routes: any[] = [];
+
+  languages.forEach((lang) => {
+    routeConfig.forEach((route) => {
+      const basePath = route.path === '/' ? '' : route.path;
+      const localizedPath = `/${lang}${basePath}`;
+      
+      routes.push({
+        path: localizedPath,
         element: (
           <ErrorBoundary>
             <route.element />
           </ErrorBoundary>
         ),
-      })),
+      });
+    });
+  });
+
+  return routes;
+};
+
+export const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <AppLayout />,
+    children: [
+      // Redirect root to default language
+      {
+        index: true,
+        element: <Navigate to="/en" replace />,
+      },
+      // Localized routes
+      ...createLocalizedRoutes(),
+      // Legacy routes without language prefix (redirect to /en)
+      ...routeConfig
+        .filter((route) => route.path !== '/')
+        .map((route) => ({
+          path: route.path,
+          element: <Navigate to={`/en${route.path}`} replace />,
+        })),
       {
         path: '*',
         element: (

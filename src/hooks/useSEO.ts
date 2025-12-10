@@ -1,7 +1,10 @@
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { SEOProps } from '@/types';
 
 export const useSEO = ({ title, description, schema }: SEOProps) => {
+  const { i18n } = useTranslation();
+
   useEffect(() => {
     document.title = title;
 
@@ -14,6 +17,8 @@ export const useSEO = ({ title, description, schema }: SEOProps) => {
           tag.setAttribute('name', selector.replace('meta[name="', '').replace('"]', ''));
         } else if (attr === 'property') {
           tag.setAttribute('property', selector.replace('meta[property="', '').replace('"]', ''));
+        } else if (attr === 'http-equiv') {
+          tag.setAttribute('http-equiv', selector.replace('meta[http-equiv="', '').replace('"]', ''));
         }
         document.head.appendChild(tag);
       }
@@ -29,10 +34,17 @@ export const useSEO = ({ title, description, schema }: SEOProps) => {
     setMeta('meta[name="bingbot"]', 'name', 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1');
 
     // Language and locale
-    setMeta('meta[http-equiv="content-language"]', 'http-equiv', 'en');
-    setMeta('meta[name="language"]', 'name', 'English');
+    const lang = i18n.language;
+    const locale = lang === 'ua' ? 'uk_UA' : 'en_GB';
+    const languageName = lang === 'ua' ? 'Ukrainian' : 'English';
+    
+    setMeta('meta[http-equiv="content-language"]', 'http-equiv', lang);
+    setMeta('meta[name="language"]', 'name', languageName);
     setMeta('meta[name="geo.region"]', 'name', 'GB');
     setMeta('meta[name="geo.country"]', 'name', 'United Kingdom');
+    
+    // Update html lang attribute
+    document.documentElement.lang = lang;
 
     // Open Graph tags
     setMeta('meta[property="og:type"]', 'property', 'website');
@@ -44,7 +56,7 @@ export const useSEO = ({ title, description, schema }: SEOProps) => {
     setMeta('meta[property="og:image:width"]', 'property', '1200');
     setMeta('meta[property="og:image:height"]', 'property', '630');
     setMeta('meta[property="og:image:alt"]', 'property', 'Zardan Systems - Enterprise Integration & Automation');
-    setMeta('meta[property="og:locale"]', 'property', 'en_GB');
+    setMeta('meta[property="og:locale"]', 'property', locale);
 
     // Twitter Card tags
     setMeta('meta[name="twitter:card"]', 'name', 'summary_large_image');
@@ -75,5 +87,5 @@ export const useSEO = ({ title, description, schema }: SEOProps) => {
     }
     
     return undefined;
-  }, [title, description, schema]);
+  }, [title, description, schema, i18n.language]);
 };

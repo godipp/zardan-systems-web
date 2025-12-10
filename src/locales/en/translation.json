@@ -1,0 +1,527 @@
+{
+  "nav": {
+    "home": "Home",
+    "product": "Product",
+    "services": "Services",
+    "caseStudies": "Case Studies",
+    "about": "About",
+    "process": "Process",
+    "contact": "Contact"
+  },
+  "home": {
+    "seo": {
+      "title": "Zardan Systems | Enterprise Integration & Automation",
+      "description": "System integration, process automation, and data analytics for finance, logistics, and manufacturing across EU and UK."
+    },
+    "hero": {
+      "label": "ZIC for MFIs",
+      "title": "Recovers 20–35% of applications you lose due to timeouts.",
+      "benefits": [
+        "Reduces BKI timeouts by 30–50%.",
+        "Eliminates adapter delays during peak hours.",
+        "Doesn't touch your scoring algorithm — works on top of it."
+      ],
+      "ctaTechnical": "Technical Call",
+      "ctaPilot": "14-Day Pilot"
+    },
+    "services": {
+      "description": "Our integration frameworks are designed for operational efficiency and control."
+    },
+    "trustCta": {
+      "trustText": "Trusted by SMEs across the EU and UK.",
+      "title": "Ready to optimize your operations?",
+      "description": "Schedule a consultation to discuss integration and automation requirements.",
+      "button": "Discuss Your Project"
+    },
+    "metrics": {
+      "title": "Key metrics that ZIC improves from day one",
+      "items": [
+        {
+          "value": "–28%",
+          "description": "Application losses during peak hours (due to timeouts and BKI overload).",
+          "company": "Novaland",
+          "link": "/case-studies/novalend"
+        },
+        {
+          "value": "–50%",
+          "description": "BKI timeouts and retry failures during peak hours.",
+          "company": "MFO UA",
+          "link": "/case-studies/ukraine-mfi"
+        },
+        {
+          "value": "+45–60%",
+          "description": "Scoring flow throughput under load.",
+          "company": "Novaland",
+          "link": "/case-studies/novalend"
+        },
+        {
+          "value": "–90%",
+          "description": "\"Dead integrations\" — hung adapters and missed callbacks.",
+          "company": "MFO UA",
+          "link": "/case-studies/ukraine-mfi"
+        }
+      ]
+    },
+    "companies": {
+      "title": "Companies we have worked with and collaborate with"
+    },
+    "caseStudy": {
+      "title": "Application losses during peak hours",
+      "problem": {
+        "text1": "The company was losing part of applications daily and didn't even know about it.",
+        "text2": "The system was working, but conversion was falling."
+      },
+      "solution": {
+        "title": "What ZIC did",
+        "items": [
+          "Identified specific points where applications stopped or disappeared.",
+          "Isolated adapter hangs so they wouldn't block the entire flow.",
+          "Recovered applications that were \"lost\" during timeouts."
+        ]
+      },
+      "result": "Result: application losses during peak hours reduced by 28%.",
+      "cta": "Discuss Your Project"
+    },
+    "adapters": {
+      "title": "Adapters that don't break your flow",
+      "problem": "During peak hours, one hung adapter can stop the entire pipeline.",
+      "solution": {
+        "title": "ZIC cuts off this effect: isolates the failure and prevents it from spreading.",
+        "items": [
+          {
+            "title": "Removes duplicate calls to external services",
+            "description": "Fewer unnecessary requests to Credit Bureaus and other systems."
+          },
+          {
+            "title": "Suppresses retry avalanche that consumes throughput",
+            "description": "External service hung — flow doesn't turn into chaos."
+          },
+          {
+            "title": "Isolates adapter hangs and keeps the stream alive",
+            "description": "One failure no longer stops the entire business."
+          }
+        ]
+      },
+      "result": "Result: peak throughput increases by +40–60%, depending on system state.",
+      "cta": "Schedule a technical call or pilot",
+      "modalDescription": "Choose a collaboration option:"
+    },
+    "scoringTime": {
+      "title": "Scoring time that doesn't cut conversion",
+      "subtitle": "A slow decision is a lost client.",
+      "intro": "ZIC reduces delay not by changing your scoring, but by removing what blocks it.",
+      "sectionTitle": "What specifically cuts response time",
+      "items": [
+        {
+          "title": "Fewer queues around scoring",
+          "description": "ZIC removes bottlenecks before the service — it receives requests without a flood of repeated calls."
+        },
+        {
+          "title": "No hung adapters holding the flow",
+          "description": "Scoring stops waiting for data that \"hangs\"."
+        },
+        {
+          "title": "Stable speed even at peak",
+          "description": "Flow is even, no jumps from 5 to 25 seconds."
+        }
+      ],
+      "result": "Result: 25–40% faster decision return, without intrusion into business logic.",
+      "cta": "Schedule a technical call or pilot"
+    },
+    "enterpriseReady": {
+      "label": "Enterprise-ready",
+      "title": "We work on top of your system without breaking it",
+      "items": [
+        {
+          "title": "Scoring",
+          "description": "ZIC works as a separate layer. Your business rules remain untouched."
+        },
+        {
+          "title": "Architecture",
+          "description": "No rewriting adapters, decision modules, or monoliths. Deploys alongside and takes control of the flow."
+        },
+        {
+          "title": "Reliability",
+          "description": "One service failure doesn't cause a cascade failure."
+        },
+        {
+          "title": "Scaling",
+          "description": "Add instances — throughput increases immediately. No migrations. No maintenance windows."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Want to see how your flow behaves under load?",
+      "description": "We'll connect to your test environment and show where you're losing applications — without changing your scoring.",
+      "buttonTechnical": "Technical Call",
+      "buttonPilot": "14-Day Pilot"
+    }
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Enterprise integration and automation solutions designed for operational efficiency.",
+    "description": "We deliver integration and automation systems trusted by organizations across the EU and UK.",
+    "learnMore": "Learn More",
+    "system-integration": {
+      "title": "System Integration",
+      "description": "Connect ERP, CRM, and legacy systems through secure API architecture used to cut manual workflows and improve control."
+    },
+    "process-automation": {
+      "title": "Process Automation",
+      "description": "Automate repetitive workflows across departments to reduce manual intervention, eliminate errors, and accelerate processing time."
+    },
+    "ai-integration": {
+      "title": "AI Integration",
+      "description": "Enhance decision-making with integrated AI modules that provide intelligent automation and predictive analytics."
+    }
+  },
+  "footer": {
+    "companyDescription": "Zardan Systems Ltd — enterprise system integration & automation partner.",
+    "trustText": "Trusted by SMEs across the EU and UK.",
+    "services": "Services",
+    "caseStudies": "Case Studies",
+    "company": "Company",
+    "copyright": "© 2025 Zardan Systems. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "caseStudies": {
+    "title": "Case Studies",
+    "subtitle": "Our projects demonstrate measurable impact across industries.",
+    "trustUkraine": "Clients from Ukraine trust us",
+    "trustPoland": "Clients from Poland trust us",
+    "readFullCase": "Read full case study",
+    "problem": "Problem",
+    "solution": "Solution",
+    "results": "Results",
+    "novalend": {
+      "seoTitle": "Novalend Case Study",
+      "seoDescription": "How ZIC stabilized Novalend's scoring flow during peak hours, reducing losses from 20-28% to 2-4% and increasing throughput by 45-60%.",
+      "backToCases": "Back to case studies",
+      "logoAlt": "Novalend",
+      "title": "Novalend — stabilizing flow during peak hours",
+      "subtitle": "How Integration ZIC eliminated bottlenecks and increased throughput by 45-60% without changing scoring logic.",
+      "challenge": {
+        "title": "Challenge",
+        "intro": "During peak hours, flow increased 3×.",
+        "problemsIntro": "Problems manifested at specific points:",
+        "problems": [
+          "BIK adapter gave delays of 2.7–3.8 s, triggering 7–12 retry requests",
+          "fan-in node \"CreditProfileResolver\" was blocked by queues up to 2400 applications",
+          "scoring response time grew to 12–18 seconds",
+          "losses before scoring: 20–28%"
+        ]
+      },
+      "solution": {
+        "title": "Solution",
+        "intro": "ZIC was connected on top of the existing system, without changes to scoring:",
+        "items": [
+          "isolated BIK hangs, removed duplication (1 request instead of 7–12)",
+          "moved retry logic to a single centralized layer",
+          "unloaded fan-in so queues wouldn't block the entire flow",
+          "cut the chain \"BIK → AntiFraud → DecisionQueue\" so one timeout wouldn't fail the entire application"
+        ]
+      },
+      "results": {
+        "title": "Results",
+        "items": [
+          "Scoring time: 12–18 s → 7–9 s",
+          "Losses before scoring: 20–28% → 2–4%",
+          "Fan-in queues: ~2400 → <300",
+          "BIK retry requests: 7–12 → 1",
+          "Peak throughput: +45–60%",
+          "Scoring logic: unchanged."
+        ]
+      }
+    },
+    "nexu": {
+      "seoTitle": "Nexu Case Study",
+      "seoDescription": "How ZIC stabilized Nexu's AntiFraud chain and reduced scoring delays, improving conversion by 12-18% during peak hours.",
+      "backToCases": "Back to case studies",
+      "logoAlt": "Nexu",
+      "title": "Nexu — stabilizing AntiFraud chain and reducing scoring delays",
+      "subtitle": "How Integration ZIC eliminated AntiFraud chain failures and reduced route time from 14-20s to 8-11s without changing business logic.",
+      "challenge": {
+        "title": "Challenge",
+        "intro": "At Nexu, the highest traffic occurred during 16:30–20:00 windows, when applications increased by 2.4–3.1×.",
+        "problemsIntro": "Main failures occurred in the external verification chain:",
+        "problems": [
+          "KRD service (Krajowy Rejestr Długów) responded unevenly: 1.2–5.4 seconds, creating \"gaps\" in flows.",
+          "BIG InfoMonitor AntiFraud process was blocked if BIG InfoMonitor delayed more than 3 seconds.",
+          "ScoreGateQueue accumulated 800–1200 applications, waiting for a complete data set.",
+          "Repeated requests to KRD and BIG gave 3–5× load during peak hours.",
+          "Conversion dropped because the average route time \"entry → scoring\" grew to 14–20 seconds."
+        ]
+      },
+      "solution": {
+        "title": "Solution",
+        "intro": "ZIC was integrated as a layer between external bureaus and Nexu's AntiFraud modules, without changing their business logic.",
+        "items": [
+          "Normalization of KRD/BIG delays: ZIC did not trigger retries while the first request was active.",
+          "Centralization of retry logic: a single retry model, instead of each adapter duplicating its own.",
+          "Isolation of AntiFraud chain: timeout of one bureau no longer blocked the rest of the data.",
+          "Optimization of ScoreGateQueue: applications no longer waited for a \"full package\" when one service hung.",
+          "Reduction of traffic \"dusting\" when multiple adapters simultaneously triggered retry."
+        ]
+      },
+      "results": {
+        "title": "Results",
+        "items": [
+          "Time to scoring: 14–20 s → 8–11 s",
+          "KRD/BIG retry requests: 3–5× → 1×",
+          "ScoreGate queues: 800–1200 → <250",
+          "AntiFraud blocking: eliminated",
+          "Peak hour conversion: +12–18%",
+          "Scoring logic: unchanged."
+        ]
+      }
+    },
+    "ukraineMfi": {
+      "seoTitle": "Ukrainian MFI Case Study",
+      "seoDescription": "How ZIC stabilized UBKI, PVBKI, and AntiFraud for a Ukrainian MFI, reducing application losses from 18-26% to 2-5%.",
+      "backToCases": "Back to case studies",
+      "logoAlt": "Ukrainian MFI",
+      "title": "Ukrainian MFI — stabilizing UBKI, PVBKI, and AntiFraud",
+      "subtitle": "How Integration ZIC eliminated dead integrations and reduced scoring time from 17-25s to 9-13s without changing business logic.",
+      "challenge": {
+        "title": "Challenge",
+        "intro": "During peak hours, the flow was broken by four critical nodes:",
+        "problemsIntro": "",
+        "problems": [
+          "UBKI: Delays jumped to 5 seconds. The adapter triggered 4–7 repeated calls, increasing load and direct overpayment for each request.",
+          "PVBKI: Service hung in pending status, provoking call duplication and cost growth during peak hours.",
+          "Internal Fraud Engine: Queues grew to 900–1400 events when UBKI/PVBKI slowly returned responses. Queue-blocking crashed the entire fan-in.",
+          "Internal ScoreEngine: The \"entry → scoring\" route stretched to 17–25 seconds, applications dropped out. Dead integrations reached 8–12%: statuses did not return, the flow broke."
+        ]
+      },
+      "solution": {
+        "title": "Solution",
+        "intro": "ZIC was introduced on top of existing services, without changes to their business logic:",
+        "items": [
+          "Normalized UBKI/PVBKI: 1 call instead of 3–6, removed overpayment.",
+          "Introduced response cache to avoid duplicate requests.",
+          "Moved retry to a centralized mechanism, suppressing the retry avalanche.",
+          "Isolated AntiFraud from unstable credit bureaus, so queues would not block scoring.",
+          "Optimized the path to ScoreEngine, removing dependency on slow nodes.",
+          "Eliminated \"dead integrations\": state-machine recovery after partial responses."
+        ]
+      },
+      "results": {
+        "title": "Results",
+        "items": [
+          "Credit bureau timeouts: decreased by 50%",
+          "Dead integrations: 8–12% → <1%",
+          "BKI retry calls: 4–7 → 1",
+          "AntiFraud queue: 900–1400 → 200–350",
+          "Time to scoring: 17–25 s → 9–13 s",
+          "Application losses: 18–26% → 2–5%",
+          "Scoring logic: unchanged."
+        ]
+      }
+    },
+    "agrotep": {
+      "seoTitle": "Agrotep Case Study",
+      "seoDescription": "How Agrotep transitioned to microservices architecture and stabilized logistics integrations, reducing GPS queues from 18-25k to less than 2k.",
+      "backToCases": "Back to case studies",
+      "logoAlt": "Agrotep",
+      "title": "Agrotep — transition to microservices architecture and logistics integration stabilization",
+      "subtitle": "How Agrotep moved from monolithic architecture to microservices with stable integration layer, reducing GPS queues by 90% and ERP delays from 20-40 minutes to 1-3 minutes.",
+      "challenge": {
+        "title": "Challenge",
+        "intro": "Agrotep works with a constant data flow from warehouse systems, GPS trackers, carriers, and ERP.",
+        "problemsIntro": "The old monolithic system could not handle load in two critical zones:",
+        "problems": [
+          "Transport tracking: GPS packets arrived at varying frequencies: from 5 to 90 seconds, the monolith could not process them in time, data went into queues up to 18–25 thousand records.",
+          "Carrier integrations: External APIs worked unstably: response time 1.2–4.8 seconds, some callbacks did not arrive, repeated requests created duplication in orders. At peak, this gave up to 14% false statuses in the chain \"route creation → confirmation → actual delivery\".",
+          "ERP chain: ERP waited for a full data package until transport status was updated. This blocked document formation for 20–40 minutes."
+        ]
+      },
+      "solution": {
+        "title": "Solution",
+        "intro": "The company transitioned to microservices architecture with a stable integration layer between systems.",
+        "items": [
+          "GPS flow moved to a separate service with Kafka buffering.",
+          "Implemented data normalization service from carriers (unification of 5 different APIs).",
+          "Added retry model with duplication protection.",
+          "Implemented callback router for recovering delivery of lost statuses.",
+          "ERP receives events through queues, does not wait for the entire chain.",
+          "Implemented health monitor for all integrations."
+        ]
+      },
+      "results": {
+        "title": "Results",
+        "items": [
+          "GPS queues: 18–25k → <2k",
+          "Transport status delay: 5–90 s → 3–7 s",
+          "False statuses in carriers: 14% → 1.5–2%",
+          "ERP delays in documents: 20–40 min → 1–3 min",
+          "Lost callbacks: decreased by ~85%"
+        ]
+      }
+    }
+  },
+  "common": {
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "getStarted": "Get Started"
+  },
+  "ui": {
+    "languageSwitcher": {
+      "switchLanguage": "Switch language",
+      "english": "English",
+      "ukrainian": "Ukrainian"
+    },
+    "navigation": {
+      "companyName": "Zardan Systems",
+      "logoAlt": "Zardan Systems Logo",
+      "toggleMenu": "Toggle menu"
+    },
+    "homeHero": {
+      "title": "Integration. Automation. Control.",
+      "subtitle": "We design and connect enterprise systems across finance, logistics, and manufacturing.",
+      "ctaButton": "Request Consultation",
+      "logoAlt": "Zardan Systems Logo"
+    },
+    "footer": {
+      "address": {
+        "street": "61 Bridge Street",
+        "city": "Kington, HR5 3DJ",
+        "country": "United Kingdom"
+      },
+      "links": {
+        "systemIntegration": "System Integration",
+        "processAutomation": "Process Automation",
+        "aiIntegration": "AI Integration",
+        "product": "Product",
+        "about": "About",
+        "process": "Process",
+        "caseStudies": "Case Studies",
+        "contact": "Contact"
+      },
+      "linkedIn": "LinkedIn"
+    },
+    "altText": {
+      "companyLogo": "Company logo",
+      "countryFlag": "Country flag",
+      "scoringTimeCharts": "Scoring time charts",
+      "stableFlowDiagram": "Stable flow diagram",
+      "adaptersIsolationDiagram": "Adapters isolation diagram",
+      "automationGear": "Automation Gear"
+    },
+    "scrollToTop": {
+      "ariaLabel": "Scroll to top",
+      "title": "Scroll to top"
+    }
+  },
+  "about": {
+    "title": "About Zardan Systems",
+    "headerDescription": "Founded in 2018 in the United Kingdom, Zardan Systems is an engineering company specializing in integration solutions for the financial sector. Our expertise lies in high-load lending and scoring processes, where decision speed and stability under load are critical.",
+    "scalePresence": {
+      "title": "Scale & Presence",
+      "years": "Years delivering automation solutions",
+      "specialists": "Specialists",
+      "industries": "Core industries",
+      "projects": "Completed projects",
+      "note": "Figures updated annually — based on active project portfolio."
+    },
+    "originTransformation": {
+      "title": "Origin & Transformation",
+      "p1": "Zardan Systems was founded in 2018 in the United Kingdom as an engineering company specializing in integration solutions for the financial sector. Initially, the company focused on developing services for transaction processing and integrating external risk providers for European fintech companies.",
+      "p2": "From 2020, the company focused on high-load lending and scoring processes, where decision speed and stability under load are critical. During this period, the team developed its own approach to flow orchestration and optimization of integrations with external services (credit bureaus, fraud detection, scoring engines). This approach later became the foundation of the ZIC product — Zardan Integration Core.",
+      "p3": "Since 2021, Zardan Systems has been working with Central and Eastern European markets, including Polish digital credit platforms requiring integration with BIK, AntiFraud, and complex fan-in/fan-out processes, as well as Ukrainian MFIs operating with UBKI, PVBKI, internal AntiFraud systems, and unstable adapters.",
+      "p4": "In 2022–2024, the company focused on the ZIC product, which brought enterprise integration practices to the fast lending segment, where there is no room for delays, duplicates, or hung adapters. Today, Zardan Systems is a small specialized engineering team with British jurisdiction and expertise in two niches: credit scoring and financial flow integrations."
+    },
+    "capability": {
+      "title": "Capability",
+      "p1": "Zardan Systems designs, implements, and maintains integration frameworks and automation layers for enterprise infrastructures. Our core expertise lies in two specialized niches: credit scoring and financial flow integrations, where we ensure high-load processes remain stable, fast, and reliable.",
+      "p2": "The company applies architectural rigor, strict development standards, and measurable KPIs in every delivery. Each integration follows a clear sequence: requirement analysis, architecture definition, implementation, validation, and operational transfer. Our ZIC product brings enterprise-grade integration practices to fast lending environments, eliminating delays, duplicates, and adapter failures.",
+      "p3": "Beyond financial services, we also deliver integration projects in adjacent sectors including logistics, ERP systems, and event-driven systems for GPS and delivery services. Our goal is sustainable automation, where every process is traceable, every dependency documented, and every outcome verifiable."
+    },
+    "operatingPrinciples": {
+      "title": "Operating Principles",
+      "p1": "We approach integration as an engineering discipline, not a service. Each system we design must be stable under load, transparent in execution, and predictable in maintenance.",
+      "p2": "Our processes emphasize auditability, accountability, and control. Documentation, monitoring, and performance baselines are established for every solution deployed.",
+      "p3": "Zardan Systems operates under principles of precision, verification, and reliability — ensuring that each delivered system enhances operational integrity and long-term scalability."
+    },
+    "serviceRegions": {
+      "title": "Service Regions",
+      "p1": "The company provides services primarily across the European Union and the United Kingdom, with strong focus on Central and Eastern European markets since 2021. Our key directions include Polish digital credit platforms requiring integration with BIK, AntiFraud, and complex fan-in/fan-out processes, as well as Ukrainian MFIs working with UBKI, PVBKI, internal AntiFraud systems, and unstable adapters.",
+      "p2": "We also deliver integration projects in adjacent sectors including logistics, ERP systems, and event-driven systems for GPS and delivery services. Our development continues to focus on strengthening cooperation with European financial sectors through standardized integration frameworks and the ZIC product, which brings enterprise integration practices to fast lending environments."
+    }
+  },
+  "process": {
+    "title": "Our Process",
+    "subtitle": "A structured methodology that ensures reliable integration and automation delivery.",
+    "step": "Step {{number}}",
+    "steps": {
+      "discovery": {
+        "title": "Discovery",
+        "description": "Requirements analysis and system audit to identify integration points and automation opportunities.",
+        "details": [
+          "Stakeholder interviews and workflow mapping",
+          "Technical assessment of existing systems",
+          "Documentation of integration requirements"
+        ]
+      },
+      "integration": {
+        "title": "Integration",
+        "description": "Design and deployment of secure integration architecture with testing protocols.",
+        "details": [
+          "API design and data flow architecture",
+          "Development and staging environment setup",
+          "Integration testing and validation"
+        ]
+      },
+      "monitoring": {
+        "title": "Monitoring",
+        "description": "Post-deployment support with performance monitoring and continuous optimization.",
+        "details": [
+          "Real-time monitoring dashboards",
+          "Issue detection and resolution",
+          "Performance optimization and scaling"
+        ]
+      }
+    },
+    "whyWorks": {
+      "title": "Why This Approach Works",
+      "p1": "Our three-phase methodology ensures technical accuracy and operational alignment at every stage.",
+      "p2": "Each phase includes stakeholder review and sign-off before progression. This structured approach minimizes implementation risk and ensures delivery meets documented requirements."
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Schedule a consultation to discuss integration and automation requirements.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "John Smith",
+      "company": "Company",
+      "companyPlaceholder": "Company Name",
+      "email": "Email",
+      "emailPlaceholder": "john@company.com",
+      "message": "Message",
+      "messagePlaceholder": "Describe your integration or automation requirements",
+      "sending": "Sending...",
+      "send": "Send Message"
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "address": "Address",
+      "responseTime": {
+        "title": "Response Time",
+        "text": "We respond to all inquiries within 3 business days."
+      }
+    },
+    "validation": {
+      "nameMin": "Name must be at least 2 characters",
+      "nameMax": "Name too long",
+      "companyMin": "Company name required",
+      "companyMax": "Company name too long",
+      "emailInvalid": "Invalid email address",
+      "emailMax": "Email too long",
+      "messageMin": "Message must be at least 10 characters",
+      "messageMax": "Message too long"
+    }
+  }
+}
+

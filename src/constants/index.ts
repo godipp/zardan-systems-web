@@ -13,6 +13,7 @@ import {
 // Navigation configuration
 export const NAVIGATION_ITEMS: NavigationItem[] = [
   { path: '/', label: 'Home' },
+  { path: '/product', label: 'Product' },
   { path: '/services', label: 'Services' },
   { path: '/case-studies', label: 'Case Studies' },
   { path: '/about', label: 'About' },

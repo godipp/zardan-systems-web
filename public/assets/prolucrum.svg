@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120" width="240" height="120">
+  <!-- Upward-pointing chevron (golden-yellow/orange) - parallel lines forming open triangle -->
+  <path d="M 120 15 L 145 40 M 120 15 L 95 40" stroke="#F4A460" stroke-width="3" stroke-linecap="round" fill="none"/>
+  
+  <!-- Main text: PRO LUCRUM (dark gray/black) -->
+  <text x="120" y="65" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#2C2C2C" text-anchor="middle" dominant-baseline="middle" letter-spacing="1">PRO LUCRUM</text>
+  
+  <!-- Downward-pointing chevron (medium blue) - parallel lines forming open triangle -->
+  <path d="M 120 105 L 95 80 M 120 105 L 145 80" stroke="#4682B4" stroke-width="3" stroke-linecap="round" fill="none"/>
+</svg>
+

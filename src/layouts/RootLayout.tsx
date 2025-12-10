@@ -2,7 +2,6 @@ import React from 'react';
 import { ReactNode } from 'react';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
-import Breadcrumbs from '@/components/Breadcrumbs';
 import ScrollToTop from '@/components/ScrollToTop';
 import { cn } from '@/lib/utils';
 
@@ -21,7 +20,7 @@ export const RootLayout: React.FC<RootLayoutProps> = ({
       className
     )}>
       {/* Header */}
-      <header className="sticky top-0 z-50">
+      <header className="md:sticky md:top-0 z-50 relative">
         <Navigation />
       </header>
 

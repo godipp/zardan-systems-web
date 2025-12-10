@@ -31,17 +31,26 @@
           const favicon = document.querySelector('link[rel="icon"]');
           const shortcutIcon = document.querySelector('link[rel="shortcut icon"]');
           
-          if (isDark) {
-            favicon.href = '/assets/logo_dark.svg?v=2';
-            shortcutIcon.href = '/assets/logo_dark.svg?v=2';
-          } else {
-            favicon.href = '/assets/logo_light.svg?v=2';
-            shortcutIcon.href = '/assets/logo_light.svg?v=2';
+          // Check if elements exist before setting href
+          if (favicon) {
+            favicon.href = isDark 
+              ? '/assets/logo_dark.svg?v=2' 
+              : '/assets/logo_light.svg?v=2';
+          }
+          
+          if (shortcutIcon) {
+            shortcutIcon.href = isDark 
+              ? '/assets/logo_dark.svg?v=2' 
+              : '/assets/logo_light.svg?v=2';
           }
         }
         
         // Update on load
-        updateFavicon();
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', updateFavicon);
+        } else {
+          updateFavicon();
+        }
         
         // Update on theme change
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
