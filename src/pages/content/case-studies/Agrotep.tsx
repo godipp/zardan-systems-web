@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import SEOHead from '@/components/SEOHead';
 import { CaseStudyHeader } from '@/components/case-studies/CaseStudyHeader';
-import { CaseStudyContentSection } from '@/components/case-studies/CaseStudyContentSection';
+import { CaseStudyContent } from '@/components/case-studies/CaseStudyContent';
 
 const Agrotep: React.FC = () => {
   const { t } = useTranslation();
@@ -24,25 +24,16 @@ const Agrotep: React.FC = () => {
           backTextKey="caseStudies.agrotep.backToCases"
         />
 
-        <CaseStudyContentSection
-          titleKey="caseStudies.agrotep.challenge.title"
-          introKey="caseStudies.agrotep.challenge.intro"
-          problemsIntroKey="caseStudies.agrotep.challenge.problemsIntro"
-          problemsKey="caseStudies.agrotep.challenge.problems"
-          background="white"
-        />
-
-        <CaseStudyContentSection
-          titleKey="caseStudies.agrotep.solution.title"
-          introKey="caseStudies.agrotep.solution.intro"
-          itemsKey="caseStudies.agrotep.solution.items"
-          background="gray"
-        />
-
-        <CaseStudyContentSection
-          titleKey="caseStudies.agrotep.results.title"
-          itemsKey="caseStudies.agrotep.results.items"
-          background="white"
+        <CaseStudyContent
+          challengeTitleKey="caseStudies.agrotep.challenge.title"
+          challengeIntroKey="caseStudies.agrotep.challenge.intro"
+          challengeProblemsIntroKey="caseStudies.agrotep.challenge.problemsIntro"
+          challengeProblemsKey="caseStudies.agrotep.challenge.problems"
+          solutionTitleKey="caseStudies.agrotep.solution.title"
+          solutionIntroKey="caseStudies.agrotep.solution.intro"
+          solutionItemsKey="caseStudies.agrotep.solution.items"
+          resultsTitleKey="caseStudies.agrotep.results.title"
+          resultsItemsKey="caseStudies.agrotep.results.items"
         />
       </div>
     </>

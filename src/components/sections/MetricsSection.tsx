@@ -37,7 +37,7 @@ export const MetricsSection: React.FC = () => {
 
               const content = (
                 <>
-                  <div className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[40px] xl:text-[48px] font-normal text-[#0D1E40] mb-2 sm:mb-3">
+                  <div className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[40px] font-normal text-[#0D1E40] mb-2 sm:mb-3">
                     {metric.value}
                   </div>
                   <div className="flex flex-col items-center">

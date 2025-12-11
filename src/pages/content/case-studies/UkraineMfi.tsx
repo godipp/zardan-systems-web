@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import SEOHead from '@/components/SEOHead';
 import { CaseStudyHeader } from '@/components/case-studies/CaseStudyHeader';
-import { CaseStudyContentSection } from '@/components/case-studies/CaseStudyContentSection';
+import { CaseStudyContent } from '@/components/case-studies/CaseStudyContent';
 
 const UkraineMfi: React.FC = () => {
   const { t } = useTranslation();
@@ -22,27 +22,19 @@ const UkraineMfi: React.FC = () => {
           subtitleKey="caseStudies.ukraineMfi.subtitle"
           backLink="/case-studies"
           backTextKey="caseStudies.ukraineMfi.backToCases"
+          ndaTextKey="caseStudies.ukraineMfi.ndaText"
         />
 
-        <CaseStudyContentSection
-          titleKey="caseStudies.ukraineMfi.challenge.title"
-          introKey="caseStudies.ukraineMfi.challenge.intro"
-          problemsIntroKey="caseStudies.ukraineMfi.challenge.problemsIntro"
-          problemsKey="caseStudies.ukraineMfi.challenge.problems"
-          background="white"
-        />
-
-        <CaseStudyContentSection
-          titleKey="caseStudies.ukraineMfi.solution.title"
-          introKey="caseStudies.ukraineMfi.solution.intro"
-          itemsKey="caseStudies.ukraineMfi.solution.items"
-          background="gray"
-        />
-
-        <CaseStudyContentSection
-          titleKey="caseStudies.ukraineMfi.results.title"
-          itemsKey="caseStudies.ukraineMfi.results.items"
-          background="white"
+        <CaseStudyContent
+          challengeTitleKey="caseStudies.ukraineMfi.challenge.title"
+          challengeIntroKey="caseStudies.ukraineMfi.challenge.intro"
+          challengeProblemsIntroKey="caseStudies.ukraineMfi.challenge.problemsIntro"
+          challengeProblemsKey="caseStudies.ukraineMfi.challenge.problems"
+          solutionTitleKey="caseStudies.ukraineMfi.solution.title"
+          solutionIntroKey="caseStudies.ukraineMfi.solution.intro"
+          solutionItemsKey="caseStudies.ukraineMfi.solution.items"
+          resultsTitleKey="caseStudies.ukraineMfi.results.title"
+          resultsItemsKey="caseStudies.ukraineMfi.results.items"
         />
       </div>
     </>

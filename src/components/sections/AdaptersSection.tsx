@@ -29,21 +29,33 @@ export const AdaptersSection: React.FC = () => {
       <section className="relative bg-[#EEF1F6] py-12 sm:py-16 md:py-20">
         <Container padding="lg" maxWidth="1024px">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
-            {/* LEFT COLUMN */}
-            <div>
+            {/* LEFT COLUMN - Diagram */}
+            <div className="relative flex flex-col items-center justify-center group overflow-visible order-2 lg:order-1">
               <AnimatedSection animationType="fade" delay={100}>
+                <img
+                  src="/assets/adapters-isolation.svg"
+                  alt="Adapters isolation diagram"
+                  className="relative z-10 w-full select-none border-none shadow-none h-auto"
+                  style={{ maxWidth: '100%' }}
+                />
+              </AnimatedSection>
+            </div>
+
+            {/* RIGHT COLUMN */}
+            <div className="order-1 lg:order-2">
+              <AnimatedSection animationType="fade" delay={200}>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#0D1E40] mb-6 leading-tight">
                   {t('home.adapters.title')}
                 </h2>
               </AnimatedSection>
 
-              <AnimatedSection animationType="slide" direction="up" delay={200}>
+              <AnimatedSection animationType="slide" direction="up" delay={300}>
                 <p className="text-base sm:text-lg text-[#475569] leading-relaxed mb-6 sm:mb-8">
                   {t('home.adapters.problem')} {t('home.adapters.solution.title')}
                 </p>
               </AnimatedSection>
 
-              <AnimatedSection animationType="slide" direction="up" delay={300}>
+              <AnimatedSection animationType="slide" direction="up" delay={400}>
                 <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8 text-base sm:text-lg text-[#475569]">
                   {solutionItems.map((item, idx) => (
                     <li key={idx} className="flex items-start">
@@ -56,31 +68,19 @@ export const AdaptersSection: React.FC = () => {
                 </ul>
               </AnimatedSection>
 
-              <AnimatedSection animationType="slide" direction="up" delay={400}>
+              <AnimatedSection animationType="slide" direction="up" delay={500}>
                 <p className="text-base sm:text-lg font-semibold text-[#0D1E40] mb-6 sm:mb-8">
                   {t('home.adapters.result')}
                 </p>
               </AnimatedSection>
 
-              <AnimatedSection animationType="scale" delay={500}>
+              <AnimatedSection animationType="scale" delay={600}>
                 <Button
                   onClick={() => setIsModalOpen(true)}
                   className="bg-transparent hover:bg-transparent text-[#1E3A8A] hover:text-[#3B82F6] font-semibold text-base sm:text-lg p-0 h-auto underline-offset-4 hover:underline"
                 >
                   {t('home.adapters.cta')}
                 </Button>
-              </AnimatedSection>
-            </div>
-
-            {/* RIGHT COLUMN - Diagram */}
-            <div className="relative flex flex-col items-center justify-center group overflow-visible">
-              <AnimatedSection animationType="fade" delay={600}>
-                <img
-                  src="/assets/adapters-isolation.svg"
-                  alt="Adapters isolation diagram"
-                  className="relative z-10 w-full select-none border-none shadow-none h-auto"
-                  style={{ maxWidth: '100%' }}
-                />
               </AnimatedSection>
             </div>
           </div>

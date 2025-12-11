@@ -21,7 +21,7 @@ const Footer = () => {
             <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-8">
               <div className="text-sm sm:text-sm text-gray-300 space-y-0.5 sm:space-y-1">
                 <a 
-                  href="https://maps.google.com/?q=61+Bridge+Street,+Kington,+HR5+3DJ,+United+Kingdom"
+                  href="https://www.google.com/maps/place/Zardan+Systems/@52.2036372,-3.0286611,17z/data=!3m1!4b1!4m6!3m5!1s0x4870250062fee58f:0x7714a17f5e71a1e3!8m2!3d52.2036372!4d-3.0286611!16s%2Fg%2F11ml43jgr1?entry=ttu"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"

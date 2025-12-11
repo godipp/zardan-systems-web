@@ -34,9 +34,7 @@ export const ContactInfo: React.FC = () => {
               <div>
                 <p className="font-medium mb-1">{t('contact.info.address')}</p>
                 <a
-                  href={`https://maps.google.com/?q=${encodeURIComponent(
-                    `${COMPANY_INFO.address.street}, ${COMPANY_INFO.address.city}, ${COMPANY_INFO.address.country}`
-                  )}`}
+                  href="https://www.google.com/maps/place/Zardan+Systems/@52.2036372,-3.0286611,17z/data=!3m1!4b1!4m6!3m5!1s0x4870250062fee58f:0x7714a17f5e71a1e3!8m2!3d52.2036372!4d-3.0286611!16s%2Fg%2F11ml43jgr1?entry=ttu"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-slate-600 hover:text-[#1E40AF] transition-colors"

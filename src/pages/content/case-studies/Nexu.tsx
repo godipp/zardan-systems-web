@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import SEOHead from '@/components/SEOHead';
 import { CaseStudyHeader } from '@/components/case-studies/CaseStudyHeader';
-import { CaseStudyContentSection } from '@/components/case-studies/CaseStudyContentSection';
+import { CaseStudyContent } from '@/components/case-studies/CaseStudyContent';
 
 const Nexu: React.FC = () => {
   const { t } = useTranslation();
@@ -24,25 +24,16 @@ const Nexu: React.FC = () => {
           backTextKey="caseStudies.nexu.backToCases"
         />
 
-        <CaseStudyContentSection
-          titleKey="caseStudies.nexu.challenge.title"
-          introKey="caseStudies.nexu.challenge.intro"
-          problemsIntroKey="caseStudies.nexu.challenge.problemsIntro"
-          problemsKey="caseStudies.nexu.challenge.problems"
-          background="white"
-        />
-
-        <CaseStudyContentSection
-          titleKey="caseStudies.nexu.solution.title"
-          introKey="caseStudies.nexu.solution.intro"
-          itemsKey="caseStudies.nexu.solution.items"
-          background="gray"
-        />
-
-        <CaseStudyContentSection
-          titleKey="caseStudies.nexu.results.title"
-          itemsKey="caseStudies.nexu.results.items"
-          background="white"
+        <CaseStudyContent
+          challengeTitleKey="caseStudies.nexu.challenge.title"
+          challengeIntroKey="caseStudies.nexu.challenge.intro"
+          challengeProblemsIntroKey="caseStudies.nexu.challenge.problemsIntro"
+          challengeProblemsKey="caseStudies.nexu.challenge.problems"
+          solutionTitleKey="caseStudies.nexu.solution.title"
+          solutionIntroKey="caseStudies.nexu.solution.intro"
+          solutionItemsKey="caseStudies.nexu.solution.items"
+          resultsTitleKey="caseStudies.nexu.results.title"
+          resultsItemsKey="caseStudies.nexu.results.items"
         />
       </div>
     </>

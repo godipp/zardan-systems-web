@@ -12,6 +12,7 @@ interface CaseStudyHeaderProps {
   subtitleKey: string;
   backLink: string;
   backTextKey: string;
+  ndaTextKey?: string;
 }
 
 export const CaseStudyHeader: React.FC<CaseStudyHeaderProps> = ({
@@ -21,6 +22,7 @@ export const CaseStudyHeader: React.FC<CaseStudyHeaderProps> = ({
   subtitleKey,
   backLink,
   backTextKey,
+  ndaTextKey,
 }) => {
   const { t } = useTranslation();
   const { getLocalizedPath } = useLocalizedPath();
@@ -37,12 +39,17 @@ export const CaseStudyHeader: React.FC<CaseStudyHeaderProps> = ({
             {t(backTextKey)}
           </Link>
 
-          <div className="flex justify-center mb-8 sm:mb-10">
+          <div className="flex flex-col items-center justify-center mb-8 sm:mb-10">
             <img
               src={logo}
               alt={t(logoAltKey)}
-              className="min-w-6 max-w-96 max-h-40 min-h-8 sm:min-h-10 w-auto"
+              className="min-w-6 max-w-96 max-h-56 min-h-8 sm:min-h-10 w-auto mb-2 sm:mb-3"
             />
+            {ndaTextKey && (
+              <p className="text-xs sm:text-sm text-[#6B7280] italic">
+                {t(ndaTextKey)}
+              </p>
+            )}
           </div>
 
           <div className="max-w-4xl mx-auto flex flex-col text-center items-center">

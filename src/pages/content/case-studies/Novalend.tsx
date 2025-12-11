@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import SEOHead from '@/components/SEOHead';
 import { CaseStudyHeader } from '@/components/case-studies/CaseStudyHeader';
-import { CaseStudyContentSection } from '@/components/case-studies/CaseStudyContentSection';
+import { CaseStudyContent } from '@/components/case-studies/CaseStudyContent';
 
 const Novalend: React.FC = () => {
   const { t } = useTranslation();
@@ -24,25 +24,16 @@ const Novalend: React.FC = () => {
           backTextKey="caseStudies.novalend.backToCases"
         />
 
-        <CaseStudyContentSection
-          titleKey="caseStudies.novalend.challenge.title"
-          introKey="caseStudies.novalend.challenge.intro"
-          problemsIntroKey="caseStudies.novalend.challenge.problemsIntro"
-          problemsKey="caseStudies.novalend.challenge.problems"
-          background="white"
-        />
-
-        <CaseStudyContentSection
-          titleKey="caseStudies.novalend.solution.title"
-          introKey="caseStudies.novalend.solution.intro"
-          itemsKey="caseStudies.novalend.solution.items"
-          background="gray"
-        />
-
-        <CaseStudyContentSection
-          titleKey="caseStudies.novalend.results.title"
-          itemsKey="caseStudies.novalend.results.items"
-          background="white"
+        <CaseStudyContent
+          challengeTitleKey="caseStudies.novalend.challenge.title"
+          challengeIntroKey="caseStudies.novalend.challenge.intro"
+          challengeProblemsIntroKey="caseStudies.novalend.challenge.problemsIntro"
+          challengeProblemsKey="caseStudies.novalend.challenge.problems"
+          solutionTitleKey="caseStudies.novalend.solution.title"
+          solutionIntroKey="caseStudies.novalend.solution.intro"
+          solutionItemsKey="caseStudies.novalend.solution.items"
+          resultsTitleKey="caseStudies.novalend.results.title"
+          resultsItemsKey="caseStudies.novalend.results.items"
         />
       </div>
     </>
