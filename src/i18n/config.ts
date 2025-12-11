@@ -23,8 +23,51 @@ const getLanguageFromUrl = (): string | undefined => {
   return undefined;
 };
 
-// Initialize with URL language or fallback
-const initialLanguage = getLanguageFromUrl() || 'en';
+// Detect language based on user location/browser settings
+const detectLanguageFromLocation = (): string => {
+  if (typeof window === 'undefined') return 'en';
+  
+  // Check browser language
+  const browserLang = navigator.language || (navigator as any).userLanguage || 'en';
+  const langLower = browserLang.toLowerCase();
+  
+  // If browser language is Ukrainian or Russian (common in Ukraine)
+  if (langLower.startsWith('uk') || langLower.startsWith('ru')) {
+    // Check timezone to better determine location
+    try {
+      const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      // Ukraine timezones
+      if (timezone.includes('Kiev') || timezone.includes('Kyiv') || timezone === 'Europe/Kiev' || timezone === 'Europe/Kyiv') {
+        return 'ua';
+      }
+      // If browser language is Ukrainian, assume Ukraine
+      if (langLower.startsWith('uk')) {
+        return 'ua';
+      }
+    } catch (e) {
+      // If timezone detection fails, use browser language
+      if (langLower.startsWith('uk')) {
+        return 'ua';
+      }
+    }
+  }
+  
+  // Default to English
+  return 'en';
+};
+
+// Get language from localStorage if available
+const getLanguageFromStorage = (): string | null => {
+  if (typeof window !== 'undefined') {
+    return localStorage.getItem('i18nextLng');
+  }
+  return null;
+};
+
+// Initialize with URL language, localStorage, or location-based detection
+const urlLang = getLanguageFromUrl();
+const storedLang = getLanguageFromStorage();
+const initialLanguage = urlLang || storedLang || detectLanguageFromLocation();
 
 i18n
   .use(LanguageDetector)

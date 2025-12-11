@@ -93,34 +93,34 @@ const Navigation: React.FC = () => {
   return (
     <>
       <nav className="border-b border-border bg-card relative">
-        <Container padding="lg">
-          <div className="flex justify-between items-center h-16">
+        <Container padding="md">
+          <div className="flex justify-between items-center h-16 gap-2 min-w-0">
             {/* Logo + Company Name */}
             <Link
               to="/"
-              className="flex items-center gap-3 text-2xl font-semibold text-[#0D1E40] tracking-tight"
+              className="flex items-center gap-2 sm:gap-3 text-lg sm:text-xl md:text-2xl font-semibold text-[#0D1E40] tracking-tight min-w-0 flex-shrink"
               onClick={closeMobileMenu}
             >
               <img
                 src="/assets/logo.svg"
                 alt={t('ui.navigation.logoAlt')}
-                className="h-10 w-auto object-contain"
+                className="h-10 sm:h-12 md:h-14 w-auto object-contain flex-shrink-0"
                 loading="eager"
-                width="40"
-                height="40"
+                width="56"
+                height="56"
               />
-              <span className="text-[#0D1E40]">{t('ui.navigation.companyName')}</span>
+              <span className="text-[#0D1E40] whitespace-nowrap hidden sm:inline">{t('ui.navigation.companyName')}</span>
             </Link>
 
             {/* Desktop Navigation - Only render on desktop */}
             {!isMobile && (
-              <div className="flex items-center gap-6">
+              <div className="flex items-center gap-2 sm:gap-3 md:gap-4 lg:gap-6 flex-shrink-0">
                 {NAVIGATION_ITEMS.map((link) => (
                   <Link
                     key={link.path}
                     to={getLocalizedPath(link.path)}
                     className={cn(
-                      'text-sm transition-colors duration-200',
+                      'text-xs sm:text-sm transition-colors duration-200 whitespace-nowrap',
                       isActive(link.path)
                         ? 'text-[#1E3A8A] font-medium'
                         : 'text-[#6B7280] hover:text-[#0D1E40]'

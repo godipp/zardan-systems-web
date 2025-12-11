@@ -57,7 +57,7 @@ export const HomeHeroSection: React.FC = () => {
                 alt={t('ui.homeHero.logoAlt')}
                 className="w-[120px] sm:w-[180px] md:min-w-[250px] lg:min-w-[300px] h-auto object-contain transform transition-transform duration-300"
               />
-              <span className="w-48 text-center text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#0D1E40] tracking-wide leading-none">
+              <span className="w-56 text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0D1E40] tracking-wide leading-none">
                 {t('ui.navigation.companyName')}
               </span>
             </div>
