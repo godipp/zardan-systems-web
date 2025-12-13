@@ -61,59 +61,16 @@ export const HeroSection: React.FC = () => {
             </AnimatedSection>
           </div>
 
-          {/* RIGHT SECTION - Light Background with UI Mockups */}
+          {/* RIGHT SECTION - Image */}
           <div className="flex items-center justify-center px-4 py-8 lg:py-12 relative overflow-hidden">
-            {/* Overlapping UI Cards/Mockups */}
-            <div className="relative w-full max-w-2xl h-full flex items-center justify-center min-h-[300px] sm:min-h-[400px]">
-              {/* Card 1 - Top Left (partially visible) - Hidden on very small screens */}
-              <div className="hidden sm:block absolute top-0 left-0 w-56 sm:w-64 h-72 sm:h-80 bg-white rounded-lg shadow-xl transform rotate-[-3deg] z-10 border border-gray-200 opacity-90">
-                <div className="p-4 h-full flex flex-col">
-                  <div className="h-8 bg-gray-100 rounded mb-3"></div>
-                  <div className="space-y-2 flex-1">
-                    <div className="h-4 bg-gray-200 rounded w-3/4"></div>
-                    <div className="h-4 bg-gray-200 rounded w-1/2"></div>
-                    <div className="h-4 bg-gray-200 rounded w-2/3"></div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Card 2 - Center (main) */}
-              <div className="relative bg-white rounded-lg shadow-2xl p-4 sm:p-6 z-20 border border-gray-200 max-w-md w-full mx-auto">
-                <div className="space-y-4">
-                  <div className="h-6 bg-[#1E3A8A] rounded w-3/4 mb-4"></div>
-                  <div className="space-y-2">
-                    <div className="h-3 bg-gray-200 rounded w-full"></div>
-                    <div className="h-3 bg-gray-200 rounded w-5/6"></div>
-                  </div>
-                  <div className="mt-6 space-y-3">
-                    <div className="h-16 sm:h-20 bg-gradient-to-r from-blue-100 to-indigo-100 rounded"></div>
-                    <div className="h-16 sm:h-20 bg-gradient-to-r from-indigo-100 to-purple-100 rounded"></div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Card 3 - Bottom Left - Hidden on very small screens */}
-              <div className="hidden sm:block absolute bottom-0 left-4 sm:left-8 w-48 sm:w-56 h-40 sm:h-48 bg-white rounded-lg shadow-xl transform rotate-[2deg] z-10 border border-gray-200 opacity-90">
-                <div className="p-4 h-full flex flex-col">
-                  <div className="h-4 bg-gray-200 rounded mb-2 w-2/3"></div>
-                  <div className="flex-1 flex items-end space-x-2">
-                    <div className="h-16 bg-blue-200 rounded w-1/3"></div>
-                    <div className="h-20 bg-indigo-200 rounded w-1/3"></div>
-                    <div className="h-12 bg-purple-200 rounded w-1/3"></div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Insight Bubble - Top Right */}
-              <div className="absolute top-8 right-4 bg-[#1E3A8A] text-white rounded-lg p-4 shadow-lg z-30 max-w-xs hidden sm:block">
-                <div className="flex items-start gap-2">
-                  <div className="w-2 h-2 bg-white rounded-full mt-1.5"></div>
-                  <p className="text-xs sm:text-sm font-medium leading-relaxed">
-                    "Integration success rate increased by 95%"
-                  </p>
-                </div>
-              </div>
-            </div>
+            <AnimatedSection animationType="fade" delay={500}>
+              <img
+                src="/assets/product/Block 1.webp"
+                alt="ZIC Product Hero"
+                className="w-full h-auto object-contain"
+                style={{ maxWidth: '100%' }}
+              />
+            </AnimatedSection>
           </div>
         </div>
       </Container>

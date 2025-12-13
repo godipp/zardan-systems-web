@@ -35,6 +35,7 @@ const UkraineMfi: React.FC = () => {
           solutionItemsKey="caseStudies.ukraineMfi.solution.items"
           resultsTitleKey="caseStudies.ukraineMfi.results.title"
           resultsItemsKey="caseStudies.ukraineMfi.results.items"
+          resultsSummaryKey="caseStudies.ukraineMfi.results.summary"
         />
       </div>
     </>

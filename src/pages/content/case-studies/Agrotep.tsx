@@ -34,6 +34,7 @@ const Agrotep: React.FC = () => {
           solutionItemsKey="caseStudies.agrotep.solution.items"
           resultsTitleKey="caseStudies.agrotep.results.title"
           resultsItemsKey="caseStudies.agrotep.results.items"
+          resultsSummaryKey="caseStudies.agrotep.results.summary"
         />
       </div>
     </>

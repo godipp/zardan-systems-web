@@ -283,7 +283,25 @@
           "BIK retry requests: 7–12 → 1",
           "Peak throughput: +45–60%",
           "Scoring logic: unchanged."
-        ]
+        ],
+        "summary": {
+          "failuresReduced": {
+            "title": "Failures reduced",
+            "percentage": "-70%",
+            "items": [
+              "BIK retry requests: 7–12 → 1",
+              "fan-in queues dramatically reduced"
+            ]
+          },
+          "performanceImproved": {
+            "title": "Performance improved",
+            "percentage": "+45%",
+            "items": [
+              "Scoring time: 18s → 7s",
+              "Throughput: +45–60%"
+            ]
+          }
+        }
       }
     },
     "nexu": {
@@ -325,7 +343,25 @@
           "AntiFraud blocking: eliminated",
           "Peak hour conversion: +12–18%",
           "Scoring logic: unchanged."
-        ]
+        ],
+        "summary": {
+          "failuresReduced": {
+            "title": "Failures reduced",
+            "percentage": "-80%",
+            "items": [
+              "retry requests: 3–5× → 1×",
+              "AntiFraud blocking eliminated"
+            ]
+          },
+          "performanceImproved": {
+            "title": "Performance improved",
+            "percentage": "+15%",
+            "items": [
+              "Scoring time: 20s → 8s",
+              "Conversion: +12–18%"
+            ]
+          }
+        }
       }
     },
     "ukraineMfi": {
@@ -369,7 +405,25 @@
           "Time to scoring: 17–25 s → 9–13 s",
           "Application losses: 18–26% → 2–5%",
           "Scoring logic: unchanged."
-        ]
+        ],
+        "summary": {
+          "failuresReduced": {
+            "title": "Failures reduced",
+            "percentage": "-50%",
+            "items": [
+              "integration errors < 1%",
+              "retry calls dramatically decreased"
+            ]
+          },
+          "performanceImproved": {
+            "title": "Performance improved",
+            "percentage": "+64%",
+            "items": [
+              "Scoring time: 25s → 9s",
+              "AF queue reduced"
+            ]
+          }
+        }
       }
     },
     "agrotep": {
@@ -409,7 +463,25 @@
           "False statuses in carriers: 14% → 1.5–2%",
           "ERP delays in documents: 20–40 min → 1–3 min",
           "Lost callbacks: decreased by ~85%"
-        ]
+        ],
+        "summary": {
+          "failuresReduced": {
+            "title": "Failures reduced",
+            "percentage": "-90%",
+            "items": [
+              "GPS queues: 25k → <2k",
+              "false statuses: 14% → 1.5%"
+            ]
+          },
+          "performanceImproved": {
+            "title": "Performance improved",
+            "percentage": "+97%",
+            "items": [
+              "Status delay: 90s → 3s",
+              "ERP delays: 40min → 1min"
+            ]
+          }
+        }
       }
     }
   },

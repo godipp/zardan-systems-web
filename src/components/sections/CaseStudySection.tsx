@@ -63,21 +63,12 @@ export const CaseStudySection: React.FC = () => {
             </AnimatedSection>
           </div>
 
-          {/* RIGHT COLUMN - Diagram */}
+          {/* RIGHT COLUMN - Image */}
           <div className="relative flex flex-col items-center justify-center group overflow-visible">
-            <div
-              aria-hidden
-              className="absolute -inset-8 pointer-events-none z-0
-                         bg-[radial-gradient(closest-side,rgba(30,58,138,0.06),transparent_70%)]"
-            />
-            <div className="absolute inset-0 flex justify-center items-center pointer-events-none z-0">
-              <div className="w-[320px] h-[320px] animate-data-pulse absolute rounded-full bg-[rgba(30,58,138,0.05)] blur-2xl" />
-              <div className="w-[200px] h-[200px] animate-data-pulse-delay absolute rounded-full bg-[rgba(30,58,138,0.04)] blur-xl" />
-            </div>
             <AnimatedSection animationType="fade" delay={600}>
               <img
-                src="/assets/stable-flow.svg"
-                alt="Stable flow diagram"
+                src="/assets/product/Block 4.webp"
+                alt="Case study diagram"
                 className="relative z-10 w-full select-none border-none shadow-none h-auto"
                 style={{ maxWidth: '100%' }}
               />

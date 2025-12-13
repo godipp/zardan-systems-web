@@ -29,11 +29,11 @@ export const AdaptersSection: React.FC = () => {
       <section className="relative bg-[#EEF1F6] py-12 sm:py-16 md:py-20">
         <Container padding="lg" maxWidth="1024px">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
-            {/* LEFT COLUMN - Diagram */}
+            {/* LEFT COLUMN - Image */}
             <div className="relative flex flex-col items-center justify-center group overflow-visible order-2 lg:order-1">
               <AnimatedSection animationType="fade" delay={100}>
                 <img
-                  src="/assets/adapters-isolation.svg"
+                  src="/assets/product/Block 5.webp"
                   alt="Adapters isolation diagram"
                   className="relative z-10 w-full select-none border-none shadow-none h-auto"
                   style={{ maxWidth: '100%' }}

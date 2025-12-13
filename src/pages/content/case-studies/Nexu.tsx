@@ -34,6 +34,7 @@ const Nexu: React.FC = () => {
           solutionItemsKey="caseStudies.nexu.solution.items"
           resultsTitleKey="caseStudies.nexu.results.title"
           resultsItemsKey="caseStudies.nexu.results.items"
+          resultsSummaryKey="caseStudies.nexu.results.summary"
         />
       </div>
     </>

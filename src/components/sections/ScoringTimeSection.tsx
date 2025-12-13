@@ -86,7 +86,7 @@ export const ScoringTimeSection: React.FC = () => {
             <div className="relative flex flex-col items-center justify-center group overflow-visible">
               <AnimatedSection animationType="fade" delay={700}>
                 <img
-                  src="/assets/scoring-time-charts.svg"
+                  src="/assets/product/Block 6.webp"
                   alt="Scoring time charts"
                   className="relative z-10 w-full select-none border-none shadow-none h-auto"
                   style={{ maxWidth: '100%' }}

@@ -34,6 +34,7 @@ const Novalend: React.FC = () => {
           solutionItemsKey="caseStudies.novalend.solution.items"
           resultsTitleKey="caseStudies.novalend.results.title"
           resultsItemsKey="caseStudies.novalend.results.items"
+          resultsSummaryKey="caseStudies.novalend.results.summary"
         />
       </div>
     </>
